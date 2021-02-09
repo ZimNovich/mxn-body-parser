@@ -22,7 +22,25 @@ const connect = require("mxn-connect");
 // Instantiating the App
 const app = connect();
 
-// Create node.js http server and listen on port
+app.use("/api", function(req, res, next) {
+    // Check if method is "POST"
+    if (req.method !== "POST") {
+        res.statusCode = 405; // Method not allowed
+        res.setHeader("Allow", "POST");
+        res.setHeader("Content-Length", 0);
+        res.end();
+        return;
+    }
+    
+    // Get Request Body
+    const body = await getRequestBody(req);
+    console.log(body);
+    
+    // Proceed further with Request body
+    ...
+});
+
+// Create node.js HTTP server and listen on port
 const options = { };
 const server = http.createServer(options, app).listen(3000, function() {
     console.log("MXN Connect server is running on port " + 3000);
