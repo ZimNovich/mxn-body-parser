@@ -25,7 +25,7 @@ const getRequestBody = require("mxn-body-parser");
 // Instantiating the App
 const app = connect();
 
-app.use("/api", function(req, res, next) {
+app.use("/api", async function(req, res, next) {
     // Check if method is "POST"
     if (req.method !== "POST") {
         res.statusCode = 405; // Method not allowed
