@@ -2,7 +2,7 @@
     "name": "mxn-body-parser",
     "main": "mxn-body-parser.js",
     "description": "Asynchronous HTTP request body parser",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "homepage": "https://github.com/ZimNovich/mxn-body-parser",
     "license": "MIT",
     "author": {
@@ -10,16 +10,18 @@
         "email": "zimnovich@gmail.com"
     },
     "keywords": [
-        "framework",
-        "web",
-        "middleware",
+        "http",
+        "request",
+        "parser",
+        "parse",
+        "body",
+        "post",
+        "json",
+        "urlencoded",
         "connect",
-        "rack"
+        "promise"
     ],
     "dependencies": {
-        "debug": "2.6.9",
-        "finalhandler": "1.1.2",
-        "parseurl": "~1.3.3"
     },
     "deprecated": false,
     "repository": {
