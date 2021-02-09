@@ -19,6 +19,9 @@ const http  = require("http");
 // MXN Connect Framework and Middleware
 const connect = require("mxn-connect");
 
+// Handling Request Body
+const getRequestBody = require("mxn-body-parser");
+
 // Instantiating the App
 const app = connect();
 
